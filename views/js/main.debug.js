@@ -506,6 +506,7 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
   var items = document.querySelectorAll('.mover');
   var numberOfItems = items.length;
+  // there are only 5 possible phases.  Lets pre-compute them.
   var positionPhases = [0, 1, 2, 3, 4].map(function (n) {
     return 100 * Math.sin(document.body.scrollTop / 1250 + n)
   });
